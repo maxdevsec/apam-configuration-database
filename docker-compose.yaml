@@ -1,0 +1,10 @@
+version: '3.5'
+
+services: 
+  config.database:
+    image:  mxinfo.azurecr.io/mxinfo.configuration.db:1881
+    container_name: mxinfo.configuration
+    environment:
+      - "ACCEPT_EULA=Y"
+    ports:
+      - "1433:1433"

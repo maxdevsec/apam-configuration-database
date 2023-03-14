@@ -7,7 +7,7 @@ CREATE LOGIN apam_config_app WITH PASSWORD = '$(appPassword)';
 
 GO
 
-CREATE USER mxinfo_config_app FOR LOGIN apam_config_app WITH DEFAULT_SCHEMA = [dbo]
+CREATE USER apam_config_app FOR LOGIN apam_config_app WITH DEFAULT_SCHEMA = [dbo]
 
 GO
 
@@ -30,7 +30,7 @@ GRANT
 	SELECT, 
 	UPDATE
 ON SCHEMA :: dbo
-	TO mxinfoConfigApplicationRole
+	TO ApamConfigApplicationRole
 GO
 
 EXEC sp_addrolemember 'ApamConfigApplicationRole', 'apam_config_app';

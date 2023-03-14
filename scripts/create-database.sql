@@ -204,7 +204,7 @@ CREATE TABLE dbo.SettingValue
     SettingId INT NOT NULL,
 	ResourceEnvironmentId SMALLINT NOT NULL,
 	CONSTRAINT FK_SettingValue_ResourceEnvironment FOREIGN KEY (ResourceEnvironmentId) REFERENCES dbo.ResourceEnvironment(ResourceEnvironmentId),
-    CONSTRAINT FK_SettingValue_Setting FOREING KEY (SettingId) REFERENCES dbo.Setting(SettingId)
+    CONSTRAINT FK_SettingValue_Setting FOREIGN KEY (SettingId) REFERENCES dbo.Setting(SettingId)
 )
 
 GO
